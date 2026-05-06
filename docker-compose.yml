@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  recon-web:
+    build: .
+    container_name: recon_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./resultados_persistentes:/root/recopilacion
+    restart: unless-stopped
